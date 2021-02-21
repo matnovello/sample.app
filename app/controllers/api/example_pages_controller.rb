@@ -7,7 +7,7 @@ class Api::ExamplePagesController < ApplicationController
     render json: { message: "woof!" }
   end
 
-  def path_action
-    render json: { message: "you have chosen the purple action" }
+  def purple_action
+    render json: { message: "you have chosen the purple action", time: Time.now.strftime("%A, %b %d") }
   end
 end
