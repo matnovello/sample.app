@@ -1,6 +1,7 @@
 class Api::ExamplePagesController < ApplicationController
   def world_action
-    render json: { message: "hello world" }
+    @time = Time.now.strftime("%A, %b %d")
+    render "hello.json.jb"
   end
 
   def dogs_action
